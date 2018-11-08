@@ -1,7 +1,7 @@
 version: '3.1'
 services:
   beakerx:
-    image: pschatzmann/beakerx:1.2.0
+    image: pschatzmann/beakerx-lab:1.2.0
     container_name: beakerx
     restart: always
     ports:
