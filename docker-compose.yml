@@ -1,0 +1,17 @@
+version: '3.1'
+services:
+  beakerx:
+    image: pschatzmann/beakerx:1.2.0
+    container_name: beakerx
+    restart: always
+    ports:
+      - 8007:8888
+    volumes:
+      - /srv/data-science:/home/beakerx
+      - /data:/data
+    environment:
+      - TZ=Europe/Zurich
+    dns: 
+      - 8.8.8.8
+    extra_hosts:
+      - "nuc.local:192.168.1.10"
